@@ -1,0 +1,52 @@
+:root{--member-green:#173d32;--member-green-light:#e9f3ed;--member-border:#e5ece7}
+body{background:#f6f8f7;color:#263a30}
+.customer-sidebar{background:var(--member-green);border:0;box-shadow:2px 0 12px #173d3210}
+.customer-sidebar .navbar-brand{min-height:76px;padding:16px}
+.customer-brand{display:flex;align-items:center;gap:11px;color:#fff;text-decoration:none}
+.customer-brand:hover{color:#fff}
+.customer-brand-icon{height:38px;width:38px;display:grid;place-items:center;border-radius:9px;background:#e7f2ea;color:var(--member-green);font-size:21px}
+.customer-brand strong{display:block;font-size:16px;letter-spacing:-.4px}
+.customer-brand small{display:block;font-size:8px;letter-spacing:1.4px;color:#aac4b4;margin-top:3px}
+.member-label{padding:17px 12px 7px;font-size:9px;font-weight:700;letter-spacing:1.3px;color:#89a697}
+.customer-sidebar .nav-link{border-radius:6px;margin:2px 4px;padding:10px 11px;color:#c0d1c7;font-size:12px}
+.customer-sidebar .nav-link:hover{background:#ffffff12;color:#fff}
+.customer-sidebar .nav-link.active{background:#2c594a;color:#fff;box-shadow:inset 3px 0 #b7d8c0}
+.customer-sidebar .nav-link-icon{color:inherit}
+.customer-sidebar-footer{border-top:1px solid #ffffff20;padding:16px 8px 7px;margin-top:auto}
+.page-wrapper{background:#f6f8f7}
+.page-body{padding:24px 0 28px}
+.page-title{font-size:24px;font-weight:700;letter-spacing:-.6px;color:#20372b;margin:4px 0 0}
+.page-pretitle{font-size:10px;letter-spacing:1.3px;color:#839188;font-weight:700}
+.page-description{font-size:12px;color:#829087;margin-top:6px}
+.member-card{border:1px solid var(--member-border);border-radius:8px;box-shadow:0 2px 8px #18372808}
+.member-card .card-header{background:#fff;border-bottom-color:#edf1ee;padding:15px 18px}
+.member-card .card-title{font-size:13px;font-weight:700;color:#2c4035;margin:0}
+.member-card .card-body{padding:18px}
+.member-balance{background:var(--member-green);color:#fff;border:0;overflow:hidden;position:relative}
+.member-balance:after{content:"";position:absolute;width:210px;height:210px;border:1px solid #ffffff19;border-radius:50%;right:-90px;top:-115px;box-shadow:0 0 0 25px #ffffff0b,0 0 0 52px #ffffff07}
+.member-balance .card-body{position:relative;z-index:1;padding:22px}
+.member-balance .balance-label{font-size:11px;color:#c0d4c8}
+.member-balance .balance-amount{font-size:34px;font-weight:700;letter-spacing:-1px;margin:7px 0 15px}
+.member-balance .balance-foot{font-size:10px;color:#c0d4c8}
+.member-stat{font-size:22px;font-weight:700;letter-spacing:-.6px;color:#2b4034;margin-top:7px}
+.member-stat-label{font-size:10px;color:#849188}
+.member-stat-icon{height:34px;width:34px;display:grid;place-items:center;border-radius:8px;background:#e9f3ed;color:#39734e;font-size:17px}
+.member-actions{display:flex;gap:9px;flex-wrap:wrap}
+.btn-member{background:var(--member-green);border-color:var(--member-green);color:white}
+.btn-member:hover{background:#245b49;border-color:#245b49;color:white}
+.table{margin:0}.table thead th{background:#fafcfb;color:#87958c;font-size:9px;letter-spacing:.7px;font-weight:700;padding:11px 14px;white-space:nowrap}
+.table tbody td{font-size:10px;padding:12px 14px;vertical-align:middle;border-color:#eff3f0}
+.amount-credit{color:#398052;font-weight:700}.amount-debit{color:#b9685e;font-weight:700}
+.member-status{display:inline-flex;align-items:center;gap:5px;border-radius:20px;padding:4px 8px;font-size:9px;font-weight:700;white-space:nowrap}
+.member-status:before{content:"";width:5px;height:5px;border-radius:50%;background:currentColor}
+.member-status.complete{background:#eaf4ed;color:#398052}.member-status.pending{background:#fbf3e4;color:#a47a34}.member-status.declined{background:#f8ecea;color:#b45d54}
+.member-detail{background:#f7faf7;border:1px solid #edf2ee;border-radius:7px;padding:12px}
+.member-detail span{display:block;color:#89968e;font-size:9px;margin-bottom:5px}.member-detail strong{font-size:12px;color:#304439}
+.form-label{font-size:10px;font-weight:600;color:#596b60}.form-control,.form-select{font-size:11px}
+.member-notice{font-size:10px;color:#7e8e84}
+.provider-choice{border:1px solid var(--member-border);border-radius:7px;padding:12px;cursor:pointer}
+.provider-choice:has(input:checked){border-color:#47855b;background:#f1f7f2}
+.empty-state{text-align:center;padding:40px;color:#89968e}
+.alert-info{font-size:11px}
+@media(max-width:991.98px){.customer-sidebar{position:relative;width:100%;min-height:auto}.customer-sidebar .navbar-toggler{order:3;margin-left:auto}.customer-sidebar .navbar-brand{min-height:62px}.customer-sidebar .navbar-collapse{padding-bottom:12px}.customer-sidebar-footer{display:none}.page-wrapper{margin-left:0!important}}
+@media(max-width:767.98px){.page-body{padding-top:16px}.page-title{font-size:21px}.member-balance .balance-amount{font-size:29px}}
