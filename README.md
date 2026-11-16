@@ -1,39 +1,34 @@
 # Health Savings Bank
 
-A frontend-only administration dashboard prototype for the Health Savings Bank project.
+Administration interface for the Health Savings Bank application.
 
-## Frontend scope
+## Interface
 
-This repository currently contains a standalone HTML, CSS and JavaScript frontend. It intentionally does **not** implement a backend, database, authentication, real financial ledger, or payment-provider integration.
+The interface is built with Tabler Core, Tabler Icons, HTML, CSS and JavaScript.
 
-### Included screens
+### Sections
+- Overview and savings summary
+- Customer directory and customer details
+- Savings accounts and balances
+- Transaction history with search, status filters and CSV export
+- Medical payment requests
+- Healthcare provider directory
+- Financial reports
+- Payment channel integration settings
 
-- Overview dashboard with summary cards and an illustrative savings activity chart
-- Customer directory with search, sample customer creation and customer detail views
-- Savings account list and customer balances
-- Transaction ledger with search, status filtering, detail views and CSV export
-- Medical payment request list
-- Example healthcare provider directory
-- Reports and account-balance summaries
-- Payment integration placeholders for future backend work
-- Workspace settings page
+## Run locally
 
-### Run locally
+1. Clone or download this repository.
+2. Open the project folder in Visual Studio Code.
+3. Open `index.html` with the Live Server extension.
 
-You can open `index.html` in a browser, or use the VS Code **Live Server** extension and select **Open with Live Server**.
+The page loads Tabler Core, Tabler Icons and Chart.js from jsDelivr, so an internet connection is required for those libraries.
 
-The frontend loads Bootstrap, Bootstrap Icons, Chart.js and web fonts from CDNs, so an internet connection is needed for those assets.
+## Current application state
 
-## Important demo notes
+The interface currently uses local sample records for layout and interaction testing. Changes made in the browser are temporary and are reset when the page is refreshed. No live customer records, funds or payment services are connected.
 
-- All customer names, balances, transactions, providers and chart figures are fictional sample data.
-- Adding a customer or transaction changes browser memory only. Refreshing the page restores the original sample data.
-- CSV exports contain sample data.
-- No actual money is stored, transferred, deposited or withdrawn.
-- The payment-provider screen is a placeholder only. It does not call MTN MoMo, FNB, eMali, Unayo or any other service.
-- Do not enter real customer information or financial details.
-
-## Frontend files
+## Frontend structure
 
 ```
 index.html
@@ -44,8 +39,6 @@ assets/
     app.js
 ```
 
-## Backend handoff
+## Backend integration
 
-The frontend is intentionally decoupled so the backend developer can later replace the demo data and browser-only actions with ASP.NET Core API calls. Suggested integration points are marked by the screen structure and functions in `assets/js/app.js`.
-
-Keep authentication, authorisation, validation, financial calculations, transaction posting, payment-provider credentials, payment confirmation and reconciliation on the server side.
+The frontend is separate from the server application. Connect the screens to the ASP.NET Core endpoints as those endpoints become available. Keep authentication, access control, financial calculations, transaction posting, payment-provider credentials, payment verification and reconciliation on the server.
