@@ -1,12 +1,15 @@
 # Health Savings Bank
 
-Administration interface for the Health Savings Bank application.
+Frontend interface for the Health Savings Bank application.
 
-## Interface
+## Portals
 
-The interface is built with Tabler Core, Tabler Icons, HTML, CSS and JavaScript.
+- `index.html` — administration portal
+- `customer.html` — customer/member portal
+- `customer-login.html` — customer sign-in preview
 
-### Sections
+## Administration portal
+
 - Overview and savings summary
 - Customer directory and customer details
 - Savings accounts and balances
@@ -16,29 +19,44 @@ The interface is built with Tabler Core, Tabler Icons, HTML, CSS and JavaScript.
 - Financial reports
 - Payment channel integration settings
 
+## Customer portal
+
+- Member dashboard and available savings balance
+- Savings account details
+- Sample contribution flow
+- Transaction history and CSV export
+- Medical payment request form and request history
+- Customer profile view and sample profile editing
+- Sign-in page preview
+
 ## Run locally
 
 1. Clone or download this repository.
-2. Open the project folder in Visual Studio Code.
-3. Open `index.html` with the Live Server extension.
+2. Open the project folder in Visual Studio Community using **File → Open → Folder**.
+3. Open `index.html` to view the administration portal, or `customer.html` to view the customer portal.
+4. Use **File → View in Browser**, or open the HTML file from File Explorer.
 
-The page loads Tabler Core, Tabler Icons and Chart.js from jsDelivr, so an internet connection is required for those libraries.
+The pages load Tabler Core, Tabler Icons and (on the administration portal) Chart.js from CDNs, so an internet connection is required for those libraries.
 
 ## Current application state
 
-The interface currently uses local sample records for layout and interaction testing. Changes made in the browser are temporary and are reset when the page is refreshed. No live customer records, funds or payment services are connected.
+The portals currently use fictional sample records for interface and interaction testing. Changes made in the browser are temporary and reset when the page is refreshed. The sign-in screen is not connected to authentication. No real customer records, funds or payment services are connected.
 
 ## Frontend structure
 
 ```
 index.html
+customer.html
+customer-login.html
 assets/
   css/
     styles.css
+    customer.css
   js/
     app.js
+    customer.js
 ```
 
 ## Backend integration
 
-The frontend is separate from the server application. Connect the screens to the ASP.NET Core endpoints as those endpoints become available. Keep authentication, access control, financial calculations, transaction posting, payment-provider credentials, payment verification and reconciliation on the server.
+The frontend is separate from the server application. Connect the screens to ASP.NET Core endpoints as those endpoints become available. Keep authentication, access control, financial calculations, transaction posting, payment-provider credentials, payment verification and reconciliation on the server.
