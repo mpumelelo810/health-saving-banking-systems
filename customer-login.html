@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Member sign in | Health Savings Bank</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.7.0/dist/css/tabler.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"><link rel="stylesheet" href="assets/css/customer.css"></head>
+<body class="d-flex flex-column">
+<div class="page page-center"><div class="container container-tight py-4">
+<div class="text-center mb-4"><a href="customer.html" class="customer-brand justify-content-center"><span class="customer-brand-icon"><i class="ti ti-heart-handshake"></i></span><span class="text-start"><strong class="text-dark">Health Savings</strong><small class="text-secondary">MEMBER PORTAL</small></span></a></div>
+<div class="card member-card"><div class="card-body p-4"><h2 class="h2 text-center mb-2">Sign in to your account</h2><p class="text-secondary text-center small mb-4">Access your health savings and account activity.</p>
+<form id="memberLoginForm"><div class="mb-3"><label class="form-label">Email address or mobile number</label><input class="form-control" name="identity" placeholder="Enter email or phone number" required></div><div class="mb-3"><label class="form-label">Password</label><input class="form-control" name="password" type="password" placeholder="Your password" required></div><button class="btn btn-member w-100" type="submit">Sign in</button></form>
+<div class="alert alert-info mt-3 mb-0 small">Preview only. This sign-in screen does not authenticate users. Use the demo access button to open the sample member portal.</div><button id="demoAccess" class="btn btn-outline-secondary w-100 mt-3">Continue to demo member portal</button></div></div>
+<div class="text-center text-secondary small mt-3"><a href="index.html" class="text-secondary">Administration portal</a></div>
+</div></div>
+<script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.7.0/dist/js/tabler.min.js"></script>
+<script>document.getElementById("demoAccess").addEventListener("click",()=>location.href="customer.html");document.getElementById("memberLoginForm").addEventListener("submit",e=>{e.preventDefault();alert("Authentication is not connected yet. Use the demo access button.");});</script>
+</body></html>
