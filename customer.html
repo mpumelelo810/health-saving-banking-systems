@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173d32">
+  <title>My Health Savings | Health Savings Bank</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.7.0/dist/css/tabler.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="assets/css/customer.css">
+</head>
+<body>
+  <div class="page">
+    <aside class="navbar navbar-vertical navbar-expand-lg navbar-dark customer-sidebar" data-bs-theme="dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#customer-menu" aria-controls="customer-menu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-brand navbar-brand-autodark">
+          <a href="customer.html" class="customer-brand">
+            <span class="customer-brand-icon"><i class="ti ti-heart-handshake"></i></span>
+            <span><strong>Health Savings</strong><small>MEMBER PORTAL</small></span>
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="customer-menu">
+          <div class="member-label">MY ACCOUNT</div>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="#" data-customer-page="overview"><span class="nav-link-icon"><i class="ti ti-layout-dashboard"></i></span><span class="nav-link-title">Overview</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#" data-customer-page="savings"><span class="nav-link-icon"><i class="ti ti-wallet"></i></span><span class="nav-link-title">My savings</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#" data-customer-page="transactions"><span class="nav-link-icon"><i class="ti ti-arrows-exchange"></i></span><span class="nav-link-title">Transactions</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#" data-customer-page="medical"><span class="nav-link-icon"><i class="ti ti-heart-rate-monitor"></i></span><span class="nav-link-title">Medical payments</span><span class="badge bg-yellow-lt ms-auto" id="pendingMedicalCount">1</span></a></li>
+          </ul>
+          <div class="member-label mt-4">PERSONAL</div>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#" data-customer-page="profile"><span class="nav-link-icon"><i class="ti ti-user"></i></span><span class="nav-link-title">My profile</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html"><span class="nav-link-icon"><i class="ti ti-shield-lock"></i></span><span class="nav-link-title">Administration</span></a></li>
+          </ul>
+        </div>
+        <div class="customer-sidebar-footer">
+          <div class="d-flex align-items-center">
+            <span class="avatar avatar-sm bg-green-lt text-green">SD</span>
+            <div class="ms-2 flex-fill"><div class="text-white fw-semibold small" id="sidebarMemberName">Sibusiso Dlamini</div><div class="text-secondary small">Member account</div></div>
+            <a href="customer-login.html" class="text-secondary" title="Sign out"><i class="ti ti-logout"></i></a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="page-wrapper">
+      <header class="navbar navbar-expand-md d-print-none">
+        <div class="container-xl">
+          <div class="navbar-nav flex-row align-items-center">
+            <span class="text-secondary small">Member portal</span>
+            <i class="ti ti-chevron-right text-secondary mx-2"></i>
+            <span class="small" id="customerBreadcrumb">Overview</span>
+          </div>
+          <div class="navbar-nav flex-row align-items-center ms-auto">
+            <span class="badge bg-green-lt me-3"><span class="status-dot status-green me-1"></span>Account active</span>
+            <div class="dropdown">
+              <a href="#" class="nav-link d-flex align-items-center p-0" data-bs-toggle="dropdown">
+                <span class="avatar avatar-sm bg-green-lt text-green">SD</span>
+                <span class="d-none d-sm-block ms-2 small fw-semibold" id="topMemberName">Sibusiso Dlamini</span>
+                <i class="ti ti-chevron-down ms-2 text-secondary"></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-end">
+                <a href="#" class="dropdown-item" data-customer-page="profile"><i class="ti ti-user me-2"></i>My profile</a>
+                <a href="customer-login.html" class="dropdown-item"><i class="ti ti-logout me-2"></i>Sign out</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="page-body">
+        <div class="container-xl">
+          <div class="alert alert-info d-flex align-items-center mb-4" role="note">
+            <i class="ti ti-info-circle me-2 fs-2"></i>
+            <div><strong>Preview account.</strong> This page uses sample information. Contributions and medical requests are not sent to a payment provider or healthcare facility.</div>
+          </div>
+          <div id="customerPageContent" aria-live="polite"></div>
+        </div>
+      </main>
+      <footer class="footer footer-transparent">
+        <div class="container-xl d-flex justify-content-between flex-wrap gap-2">
+          <span class="text-secondary small">Health Savings Bank</span>
+          <span class="text-secondary small">Member portal</span>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <div class="modal modal-blur fade" id="customerModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content" id="customerModalContent"></div></div>
+  </div>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" id="customerToastContainer"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.7.0/dist/js/tabler.min.js"></script>
+  <script src="assets/js/customer.js"></script>
+</body>
+</html>
